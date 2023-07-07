@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Result_Info_Form));
             this.Number_Entry_Label = new System.Windows.Forms.Label();
             this.Exit_Button = new System.Windows.Forms.Button();
             this.Fiter_Reset_Button = new System.Windows.Forms.Button();
@@ -48,21 +49,21 @@
             this.Search_Button = new System.Windows.Forms.Button();
             this.Search_TextBox = new System.Windows.Forms.TextBox();
             this.Filtering_GroupBox = new System.Windows.Forms.GroupBox();
+            this.Filtering_Full_Name_Tester_CheckBox = new System.Windows.Forms.CheckBox();
+            this.Filtering_Full_Name_Tester_Label = new System.Windows.Forms.Label();
+            this.Filtering_Full_Name_Tester_ComboBox = new System.Windows.Forms.ComboBox();
+            this.Filtering_Name_Test_CheckBox = new System.Windows.Forms.CheckBox();
+            this.Filtering_Code_Group_CheckBox = new System.Windows.Forms.CheckBox();
+            this.Filtering_Code_Group_Label = new System.Windows.Forms.Label();
+            this.Filtering_Name_Test_Label = new System.Windows.Forms.Label();
+            this.Filtering_Code_Group_ComboBox = new System.Windows.Forms.ComboBox();
+            this.Filtering_Name_Test_ComboBox = new System.Windows.Forms.ComboBox();
             this.Filtering_Full_Name_User_CheckBox = new System.Windows.Forms.CheckBox();
             this.Filtering_Full_Name_User_Label = new System.Windows.Forms.Label();
             this.Filtering_Full_Name_User_ComboBox = new System.Windows.Forms.ComboBox();
             this.Sorting_GroupBox = new System.Windows.Forms.GroupBox();
             this.Sorting_ComboBox = new System.Windows.Forms.ComboBox();
             this.Result_DataGridView = new System.Windows.Forms.DataGridView();
-            this.Filtering_Code_Group_CheckBox = new System.Windows.Forms.CheckBox();
-            this.Filtering_Code_Group_Label = new System.Windows.Forms.Label();
-            this.Filtering_Code_Group_ComboBox = new System.Windows.Forms.ComboBox();
-            this.Filtering_Name_Test_CheckBox = new System.Windows.Forms.CheckBox();
-            this.Filtering_Name_Test_Label = new System.Windows.Forms.Label();
-            this.Filtering_Name_Test_ComboBox = new System.Windows.Forms.ComboBox();
-            this.Filtering_Full_Name_Tester_CheckBox = new System.Windows.Forms.CheckBox();
-            this.Filtering_Full_Name_Tester_Label = new System.Windows.Forms.Label();
-            this.Filtering_Full_Name_Tester_ComboBox = new System.Windows.Forms.ComboBox();
             this.save_Progress_GroupBox.SuspendLayout();
             this.Filter_GroupBox.SuspendLayout();
             this.Search_GroupBox.SuspendLayout();
@@ -368,6 +369,126 @@
             this.Filtering_GroupBox.TabStop = false;
             this.Filtering_GroupBox.Text = "Фильтрация";
             // 
+            // Filtering_Full_Name_Tester_CheckBox
+            // 
+            this.Filtering_Full_Name_Tester_CheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(57)))), ((int)(((byte)(42)))));
+            this.Filtering_Full_Name_Tester_CheckBox.FlatAppearance.BorderSize = 0;
+            this.Filtering_Full_Name_Tester_CheckBox.Font = new System.Drawing.Font("Segoe UI Semibold", 30F, System.Drawing.FontStyle.Bold);
+            this.Filtering_Full_Name_Tester_CheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(220)))), ((int)(((byte)(162)))));
+            this.Filtering_Full_Name_Tester_CheckBox.Location = new System.Drawing.Point(631, 192);
+            this.Filtering_Full_Name_Tester_CheckBox.Name = "Filtering_Full_Name_Tester_CheckBox";
+            this.Filtering_Full_Name_Tester_CheckBox.Size = new System.Drawing.Size(12, 11);
+            this.Filtering_Full_Name_Tester_CheckBox.TabIndex = 85;
+            this.Filtering_Full_Name_Tester_CheckBox.UseVisualStyleBackColor = false;
+            this.Filtering_Full_Name_Tester_CheckBox.CheckedChanged += new System.EventHandler(this.Filtering_Full_Name_Tester_CheckBox_CheckedChanged);
+            // 
+            // Filtering_Full_Name_Tester_Label
+            // 
+            this.Filtering_Full_Name_Tester_Label.AutoSize = true;
+            this.Filtering_Full_Name_Tester_Label.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Filtering_Full_Name_Tester_Label.Location = new System.Drawing.Point(28, 157);
+            this.Filtering_Full_Name_Tester_Label.Name = "Filtering_Full_Name_Tester_Label";
+            this.Filtering_Full_Name_Tester_Label.Size = new System.Drawing.Size(137, 25);
+            this.Filtering_Full_Name_Tester_Label.TabIndex = 84;
+            this.Filtering_Full_Name_Tester_Label.Text = "ФИО тестера: ";
+            // 
+            // Filtering_Full_Name_Tester_ComboBox
+            // 
+            this.Filtering_Full_Name_Tester_ComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(48)))), ((int)(((byte)(24)))));
+            this.Filtering_Full_Name_Tester_ComboBox.DropDownHeight = 150;
+            this.Filtering_Full_Name_Tester_ComboBox.DropDownWidth = 200;
+            this.Filtering_Full_Name_Tester_ComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Filtering_Full_Name_Tester_ComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.Filtering_Full_Name_Tester_ComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(220)))), ((int)(((byte)(162)))));
+            this.Filtering_Full_Name_Tester_ComboBox.FormattingEnabled = true;
+            this.Filtering_Full_Name_Tester_ComboBox.IntegralHeight = false;
+            this.Filtering_Full_Name_Tester_ComboBox.Location = new System.Drawing.Point(23, 185);
+            this.Filtering_Full_Name_Tester_ComboBox.MaxDropDownItems = 4;
+            this.Filtering_Full_Name_Tester_ComboBox.Name = "Filtering_Full_Name_Tester_ComboBox";
+            this.Filtering_Full_Name_Tester_ComboBox.Size = new System.Drawing.Size(601, 33);
+            this.Filtering_Full_Name_Tester_ComboBox.TabIndex = 83;
+            this.Filtering_Full_Name_Tester_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Filtering_Full_Name_Tester_ComboBox_SelectedIndexChanged);
+            // 
+            // Filtering_Name_Test_CheckBox
+            // 
+            this.Filtering_Name_Test_CheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(57)))), ((int)(((byte)(42)))));
+            this.Filtering_Name_Test_CheckBox.FlatAppearance.BorderSize = 0;
+            this.Filtering_Name_Test_CheckBox.Font = new System.Drawing.Font("Segoe UI Semibold", 30F, System.Drawing.FontStyle.Bold);
+            this.Filtering_Name_Test_CheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(220)))), ((int)(((byte)(162)))));
+            this.Filtering_Name_Test_CheckBox.Location = new System.Drawing.Point(631, 256);
+            this.Filtering_Name_Test_CheckBox.Name = "Filtering_Name_Test_CheckBox";
+            this.Filtering_Name_Test_CheckBox.Size = new System.Drawing.Size(12, 11);
+            this.Filtering_Name_Test_CheckBox.TabIndex = 82;
+            this.Filtering_Name_Test_CheckBox.UseVisualStyleBackColor = false;
+            this.Filtering_Name_Test_CheckBox.CheckedChanged += new System.EventHandler(this.Filtering_Name_Test_CheckBox_CheckedChanged);
+            // 
+            // Filtering_Code_Group_CheckBox
+            // 
+            this.Filtering_Code_Group_CheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(57)))), ((int)(((byte)(42)))));
+            this.Filtering_Code_Group_CheckBox.FlatAppearance.BorderSize = 0;
+            this.Filtering_Code_Group_CheckBox.Font = new System.Drawing.Font("Segoe UI Semibold", 30F, System.Drawing.FontStyle.Bold);
+            this.Filtering_Code_Group_CheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(220)))), ((int)(((byte)(162)))));
+            this.Filtering_Code_Group_CheckBox.Location = new System.Drawing.Point(631, 128);
+            this.Filtering_Code_Group_CheckBox.Name = "Filtering_Code_Group_CheckBox";
+            this.Filtering_Code_Group_CheckBox.Size = new System.Drawing.Size(12, 11);
+            this.Filtering_Code_Group_CheckBox.TabIndex = 79;
+            this.Filtering_Code_Group_CheckBox.UseVisualStyleBackColor = false;
+            this.Filtering_Code_Group_CheckBox.CheckedChanged += new System.EventHandler(this.Filtering_Code_Group_CheckBox_CheckedChanged);
+            // 
+            // Filtering_Code_Group_Label
+            // 
+            this.Filtering_Code_Group_Label.AutoSize = true;
+            this.Filtering_Code_Group_Label.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Filtering_Code_Group_Label.Location = new System.Drawing.Point(28, 93);
+            this.Filtering_Code_Group_Label.Name = "Filtering_Code_Group_Label";
+            this.Filtering_Code_Group_Label.Size = new System.Drawing.Size(121, 25);
+            this.Filtering_Code_Group_Label.TabIndex = 78;
+            this.Filtering_Code_Group_Label.Text = "Код группы:";
+            // 
+            // Filtering_Name_Test_Label
+            // 
+            this.Filtering_Name_Test_Label.AutoSize = true;
+            this.Filtering_Name_Test_Label.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Filtering_Name_Test_Label.Location = new System.Drawing.Point(28, 221);
+            this.Filtering_Name_Test_Label.Name = "Filtering_Name_Test_Label";
+            this.Filtering_Name_Test_Label.Size = new System.Drawing.Size(153, 25);
+            this.Filtering_Name_Test_Label.TabIndex = 81;
+            this.Filtering_Name_Test_Label.Text = "Название теста:";
+            // 
+            // Filtering_Code_Group_ComboBox
+            // 
+            this.Filtering_Code_Group_ComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(48)))), ((int)(((byte)(24)))));
+            this.Filtering_Code_Group_ComboBox.DropDownHeight = 150;
+            this.Filtering_Code_Group_ComboBox.DropDownWidth = 200;
+            this.Filtering_Code_Group_ComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Filtering_Code_Group_ComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.Filtering_Code_Group_ComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(220)))), ((int)(((byte)(162)))));
+            this.Filtering_Code_Group_ComboBox.FormattingEnabled = true;
+            this.Filtering_Code_Group_ComboBox.IntegralHeight = false;
+            this.Filtering_Code_Group_ComboBox.Location = new System.Drawing.Point(23, 121);
+            this.Filtering_Code_Group_ComboBox.MaxDropDownItems = 4;
+            this.Filtering_Code_Group_ComboBox.Name = "Filtering_Code_Group_ComboBox";
+            this.Filtering_Code_Group_ComboBox.Size = new System.Drawing.Size(601, 33);
+            this.Filtering_Code_Group_ComboBox.TabIndex = 77;
+            this.Filtering_Code_Group_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Filtering_Code_Group_ComboBox_SelectedIndexChanged);
+            // 
+            // Filtering_Name_Test_ComboBox
+            // 
+            this.Filtering_Name_Test_ComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(48)))), ((int)(((byte)(24)))));
+            this.Filtering_Name_Test_ComboBox.DropDownHeight = 150;
+            this.Filtering_Name_Test_ComboBox.DropDownWidth = 200;
+            this.Filtering_Name_Test_ComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Filtering_Name_Test_ComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.Filtering_Name_Test_ComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(220)))), ((int)(((byte)(162)))));
+            this.Filtering_Name_Test_ComboBox.FormattingEnabled = true;
+            this.Filtering_Name_Test_ComboBox.IntegralHeight = false;
+            this.Filtering_Name_Test_ComboBox.Location = new System.Drawing.Point(23, 249);
+            this.Filtering_Name_Test_ComboBox.MaxDropDownItems = 4;
+            this.Filtering_Name_Test_ComboBox.Name = "Filtering_Name_Test_ComboBox";
+            this.Filtering_Name_Test_ComboBox.Size = new System.Drawing.Size(601, 33);
+            this.Filtering_Name_Test_ComboBox.TabIndex = 80;
+            this.Filtering_Name_Test_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Filtering_Name_Test_ComboBox_SelectedIndexChanged);
+            // 
             // Filtering_Full_Name_User_CheckBox
             // 
             this.Filtering_Full_Name_User_CheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(57)))), ((int)(((byte)(42)))));
@@ -462,126 +583,6 @@
             this.Result_DataGridView.Size = new System.Drawing.Size(1896, 945);
             this.Result_DataGridView.TabIndex = 132;
             // 
-            // Filtering_Code_Group_CheckBox
-            // 
-            this.Filtering_Code_Group_CheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(57)))), ((int)(((byte)(42)))));
-            this.Filtering_Code_Group_CheckBox.FlatAppearance.BorderSize = 0;
-            this.Filtering_Code_Group_CheckBox.Font = new System.Drawing.Font("Segoe UI Semibold", 30F, System.Drawing.FontStyle.Bold);
-            this.Filtering_Code_Group_CheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(220)))), ((int)(((byte)(162)))));
-            this.Filtering_Code_Group_CheckBox.Location = new System.Drawing.Point(631, 128);
-            this.Filtering_Code_Group_CheckBox.Name = "Filtering_Code_Group_CheckBox";
-            this.Filtering_Code_Group_CheckBox.Size = new System.Drawing.Size(12, 11);
-            this.Filtering_Code_Group_CheckBox.TabIndex = 79;
-            this.Filtering_Code_Group_CheckBox.UseVisualStyleBackColor = false;
-            this.Filtering_Code_Group_CheckBox.CheckedChanged += new System.EventHandler(this.Filtering_Code_Group_CheckBox_CheckedChanged);
-            // 
-            // Filtering_Code_Group_Label
-            // 
-            this.Filtering_Code_Group_Label.AutoSize = true;
-            this.Filtering_Code_Group_Label.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Filtering_Code_Group_Label.Location = new System.Drawing.Point(28, 93);
-            this.Filtering_Code_Group_Label.Name = "Filtering_Code_Group_Label";
-            this.Filtering_Code_Group_Label.Size = new System.Drawing.Size(121, 25);
-            this.Filtering_Code_Group_Label.TabIndex = 78;
-            this.Filtering_Code_Group_Label.Text = "Код группы:";
-            // 
-            // Filtering_Code_Group_ComboBox
-            // 
-            this.Filtering_Code_Group_ComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(48)))), ((int)(((byte)(24)))));
-            this.Filtering_Code_Group_ComboBox.DropDownHeight = 150;
-            this.Filtering_Code_Group_ComboBox.DropDownWidth = 200;
-            this.Filtering_Code_Group_ComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Filtering_Code_Group_ComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.Filtering_Code_Group_ComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(220)))), ((int)(((byte)(162)))));
-            this.Filtering_Code_Group_ComboBox.FormattingEnabled = true;
-            this.Filtering_Code_Group_ComboBox.IntegralHeight = false;
-            this.Filtering_Code_Group_ComboBox.Location = new System.Drawing.Point(23, 121);
-            this.Filtering_Code_Group_ComboBox.MaxDropDownItems = 4;
-            this.Filtering_Code_Group_ComboBox.Name = "Filtering_Code_Group_ComboBox";
-            this.Filtering_Code_Group_ComboBox.Size = new System.Drawing.Size(601, 33);
-            this.Filtering_Code_Group_ComboBox.TabIndex = 77;
-            this.Filtering_Code_Group_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Filtering_Code_Group_ComboBox_SelectedIndexChanged);
-            // 
-            // Filtering_Name_Test_CheckBox
-            // 
-            this.Filtering_Name_Test_CheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(57)))), ((int)(((byte)(42)))));
-            this.Filtering_Name_Test_CheckBox.FlatAppearance.BorderSize = 0;
-            this.Filtering_Name_Test_CheckBox.Font = new System.Drawing.Font("Segoe UI Semibold", 30F, System.Drawing.FontStyle.Bold);
-            this.Filtering_Name_Test_CheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(220)))), ((int)(((byte)(162)))));
-            this.Filtering_Name_Test_CheckBox.Location = new System.Drawing.Point(631, 256);
-            this.Filtering_Name_Test_CheckBox.Name = "Filtering_Name_Test_CheckBox";
-            this.Filtering_Name_Test_CheckBox.Size = new System.Drawing.Size(12, 11);
-            this.Filtering_Name_Test_CheckBox.TabIndex = 82;
-            this.Filtering_Name_Test_CheckBox.UseVisualStyleBackColor = false;
-            this.Filtering_Name_Test_CheckBox.CheckedChanged += new System.EventHandler(this.Filtering_Name_Test_CheckBox_CheckedChanged);
-            // 
-            // Filtering_Name_Test_Label
-            // 
-            this.Filtering_Name_Test_Label.AutoSize = true;
-            this.Filtering_Name_Test_Label.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Filtering_Name_Test_Label.Location = new System.Drawing.Point(28, 221);
-            this.Filtering_Name_Test_Label.Name = "Filtering_Name_Test_Label";
-            this.Filtering_Name_Test_Label.Size = new System.Drawing.Size(153, 25);
-            this.Filtering_Name_Test_Label.TabIndex = 81;
-            this.Filtering_Name_Test_Label.Text = "Название теста:";
-            // 
-            // Filtering_Name_Test_ComboBox
-            // 
-            this.Filtering_Name_Test_ComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(48)))), ((int)(((byte)(24)))));
-            this.Filtering_Name_Test_ComboBox.DropDownHeight = 150;
-            this.Filtering_Name_Test_ComboBox.DropDownWidth = 200;
-            this.Filtering_Name_Test_ComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Filtering_Name_Test_ComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.Filtering_Name_Test_ComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(220)))), ((int)(((byte)(162)))));
-            this.Filtering_Name_Test_ComboBox.FormattingEnabled = true;
-            this.Filtering_Name_Test_ComboBox.IntegralHeight = false;
-            this.Filtering_Name_Test_ComboBox.Location = new System.Drawing.Point(23, 249);
-            this.Filtering_Name_Test_ComboBox.MaxDropDownItems = 4;
-            this.Filtering_Name_Test_ComboBox.Name = "Filtering_Name_Test_ComboBox";
-            this.Filtering_Name_Test_ComboBox.Size = new System.Drawing.Size(601, 33);
-            this.Filtering_Name_Test_ComboBox.TabIndex = 80;
-            this.Filtering_Name_Test_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Filtering_Name_Test_ComboBox_SelectedIndexChanged);
-            // 
-            // Filtering_Full_Name_Tester_CheckBox
-            // 
-            this.Filtering_Full_Name_Tester_CheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(57)))), ((int)(((byte)(42)))));
-            this.Filtering_Full_Name_Tester_CheckBox.FlatAppearance.BorderSize = 0;
-            this.Filtering_Full_Name_Tester_CheckBox.Font = new System.Drawing.Font("Segoe UI Semibold", 30F, System.Drawing.FontStyle.Bold);
-            this.Filtering_Full_Name_Tester_CheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(220)))), ((int)(((byte)(162)))));
-            this.Filtering_Full_Name_Tester_CheckBox.Location = new System.Drawing.Point(631, 192);
-            this.Filtering_Full_Name_Tester_CheckBox.Name = "Filtering_Full_Name_Tester_CheckBox";
-            this.Filtering_Full_Name_Tester_CheckBox.Size = new System.Drawing.Size(12, 11);
-            this.Filtering_Full_Name_Tester_CheckBox.TabIndex = 85;
-            this.Filtering_Full_Name_Tester_CheckBox.UseVisualStyleBackColor = false;
-            this.Filtering_Full_Name_Tester_CheckBox.CheckedChanged += new System.EventHandler(this.Filtering_Full_Name_Tester_CheckBox_CheckedChanged);
-            // 
-            // Filtering_Full_Name_Tester_Label
-            // 
-            this.Filtering_Full_Name_Tester_Label.AutoSize = true;
-            this.Filtering_Full_Name_Tester_Label.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Filtering_Full_Name_Tester_Label.Location = new System.Drawing.Point(28, 157);
-            this.Filtering_Full_Name_Tester_Label.Name = "Filtering_Full_Name_Tester_Label";
-            this.Filtering_Full_Name_Tester_Label.Size = new System.Drawing.Size(137, 25);
-            this.Filtering_Full_Name_Tester_Label.TabIndex = 84;
-            this.Filtering_Full_Name_Tester_Label.Text = "ФИО тестера: ";
-            // 
-            // Filtering_Full_Name_Tester_ComboBox
-            // 
-            this.Filtering_Full_Name_Tester_ComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(48)))), ((int)(((byte)(24)))));
-            this.Filtering_Full_Name_Tester_ComboBox.DropDownHeight = 150;
-            this.Filtering_Full_Name_Tester_ComboBox.DropDownWidth = 200;
-            this.Filtering_Full_Name_Tester_ComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Filtering_Full_Name_Tester_ComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.Filtering_Full_Name_Tester_ComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(220)))), ((int)(((byte)(162)))));
-            this.Filtering_Full_Name_Tester_ComboBox.FormattingEnabled = true;
-            this.Filtering_Full_Name_Tester_ComboBox.IntegralHeight = false;
-            this.Filtering_Full_Name_Tester_ComboBox.Location = new System.Drawing.Point(23, 185);
-            this.Filtering_Full_Name_Tester_ComboBox.MaxDropDownItems = 4;
-            this.Filtering_Full_Name_Tester_ComboBox.Name = "Filtering_Full_Name_Tester_ComboBox";
-            this.Filtering_Full_Name_Tester_ComboBox.Size = new System.Drawing.Size(601, 33);
-            this.Filtering_Full_Name_Tester_ComboBox.TabIndex = 83;
-            this.Filtering_Full_Name_Tester_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Filtering_Full_Name_Tester_ComboBox_SelectedIndexChanged);
-            // 
             // Result_Info_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -604,6 +605,7 @@
             this.Controls.Add(this.Result_DataGridView);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(220)))), ((int)(((byte)(162)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Result_Info_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Результаты тестирования";

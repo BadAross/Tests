@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Test_Result_Form));
             this.Result_Label = new System.Windows.Forms.Label();
             this.Number_Correct_Answers_Label = new System.Windows.Forms.Label();
             this.Close_Batton = new System.Windows.Forms.Button();
@@ -81,6 +82,7 @@
             this.Controls.Add(this.Result_Label);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(220)))), ((int)(((byte)(162)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Test_Result_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Результат";

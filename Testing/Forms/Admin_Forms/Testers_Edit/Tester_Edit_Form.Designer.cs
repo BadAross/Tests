@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tester_Edit_Form));
             this.Number_Entry_Label = new System.Windows.Forms.Label();
             this.Change_Button = new System.Windows.Forms.Button();
             this.Delete_Button = new System.Windows.Forms.Button();
@@ -283,6 +284,7 @@
             this.Controls.Add(this.Full_Name_TextBox);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(220)))), ((int)(((byte)(162)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Tester_Edit_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Редактирвоать";
