@@ -25,11 +25,8 @@ namespace Testing.Forms
         {
             var bindingSource = new BindingSource();
 
-            bindingSource.DataSource = results.OrderBy(x => x.full_Name_Tester).Select(x => x.full_Name_User).Distinct().ToList();
+            bindingSource.DataSource = results.OrderBy(x => x.full_Name_Tester).Select(x => x.full_Name_Tester).Distinct().ToList();
             Filtering_Full_Name_Tester_ComboBox.DataSource = bindingSource.DataSource;
-
-            bindingSource.DataSource = results.OrderBy(x => x.name_Test).Select(x => x.name_Test).Distinct().ToList();
-            Filtering_Name_Test_ComboBox.DataSource = bindingSource.DataSource;
         }
 
         private void Unloads_Data_From_Database()
@@ -51,10 +48,6 @@ namespace Testing.Forms
             if (Filtering_Full_Name_Tester_CheckBox.Checked)
             {
                 list_Result_Passing_Test = list_Result_Passing_Test.Where(x => x.full_Name_Tester == Filtering_Full_Name_Tester_ComboBox.Text).ToList();
-            }
-            if (Filter_Name_Test_CheckBox.Checked)
-            {
-                list_Result_Passing_Test = list_Result_Passing_Test.Where(x => x.name_Test == Filtering_Name_Test_ComboBox.Text).ToList();
             }
             return list_Result_Passing_Test;
         }
@@ -92,7 +85,7 @@ namespace Testing.Forms
         {
             var list_Result_Passing_Test = results;
 
-            if (Filtering_Full_Name_Tester_CheckBox.Checked | Filter_Name_Test_CheckBox.Checked)
+            if (Filtering_Full_Name_Tester_CheckBox.Checked)
             {
                 list_Result_Passing_Test = Returns_Filtered_Data_By_Selected_Parameter();
             }

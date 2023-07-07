@@ -13,6 +13,7 @@ namespace Testing.Forms
     {
         private int question_Number = 0;
         private int time_In_Seconds = 0;
+        private int id_Test;
         private DateTime test_Start_Time = DateTime.Now;
         private Stopwatch stop_Watch = new Stopwatch();
         private Question[] questions;
@@ -25,6 +26,7 @@ namespace Testing.Forms
             DataSet test_Questions = Data_Search_By_Sql_Query.Returns_Data_From_Database_On_Request("select Id_Test, Id_Question, " +
                 "Text_Question, First_Answer, Second_Answer, Third_Answer, Fourth_Answer, Correct_Answer, Time_Complete from Questions join Tests " +
                 "on Test_Id=Id_Test where Name_Test = '" + name_Tets + "'");
+            id_Test = Convert.ToInt32(test_Questions.Tables[0].Rows[0]["Id_Test"]);
             questions = Transfers_Questions_From_Database_To_The_Array(test_Questions);
 
             Shows_Questions(question_Number);
@@ -75,7 +77,7 @@ namespace Testing.Forms
             int id_Active_Account = Active_Account.Returns_Id_Active_Account();
             var percentage_Correct_Answers = number_Correct_Answers.ToString() + "/" + questions.Length.ToString();
             var sql_Command = "insert into Results (Test_Id, User_Id, Number_Correct_Answers, Percentage_Correct_Answers, Test_Start_Time, Time_Spent) " +
-                "values (" + id_Active_Account + "," + id_Active_Account + ",'" + percentage_Correct_Answers + "'," +
+                "values (" + id_Test + "," + id_Active_Account + ",'" + percentage_Correct_Answers + "'," +
                 "" + percentage_Passing_Test + ",'" + test_Start_Time + "','" + time_Passing_Test + "')";
 
             DataBase_Editor.Edited_Information_To_DataBase(sql_Command);
