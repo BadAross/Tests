@@ -72,6 +72,7 @@
     <Compile Include="Classes\Customization_DataGridView.cs" />
     <Compile Include="Classes\DataBase_Conected.cs" />
     <Compile Include="Classes\DataBase_Editor.cs" />
+    <Compile Include="Classes\Data\Array_Questoins_For_Passing_Test.cs" />
     <Compile Include="Classes\Data_Search.cs" />
     <Compile Include="Classes\Data_Search_By_Sql_Query.cs" />
     <Compile Include="Classes\Generat_Password.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Classes\Active_Account.cs" />
     <Compile Include="Classes\Hash_Password.cs" />
     <Compile Include="Classes\Switching_Datagridview_Rows.cs" />
+    <Compile Include="Classes\Test_Completion_Time.cs" />
     <Compile Include="Classes\Working_With_Excel.cs" />
     <Compile Include="Enum\Type_Change.cs" />
     <Compile Include="Forms\Admin_Forms\Admin_Menu_Form.cs">
