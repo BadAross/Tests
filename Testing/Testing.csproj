@@ -73,6 +73,7 @@
     <Compile Include="Classes\DataBase_Conected.cs" />
     <Compile Include="Classes\DataBase_Editor.cs" />
     <Compile Include="Classes\Data\Array_Questoins_For_Passing_Test.cs" />
+    <Compile Include="Classes\Data\Saving_Results_Passage.cs" />
     <Compile Include="Classes\Data_Search.cs" />
     <Compile Include="Classes\Data_Search_By_Sql_Query.cs" />
     <Compile Include="Classes\Generat_Password.cs" />
@@ -80,7 +81,7 @@
     <Compile Include="Classes\Active_Account.cs" />
     <Compile Include="Classes\Hash_Password.cs" />
     <Compile Include="Classes\Switching_Datagridview_Rows.cs" />
-    <Compile Include="Classes\Test_Completion_Time.cs" />
+    <Compile Include="Classes\Data\Test_Completion_Time.cs" />
     <Compile Include="Classes\Working_With_Excel.cs" />
     <Compile Include="Enum\Type_Change.cs" />
     <Compile Include="Forms\Admin_Forms\Admin_Menu_Form.cs">
@@ -173,10 +174,10 @@
     <Compile Include="Forms\Tester_Forms\Test_List_Form.Designer.cs">
       <DependentUpon>Test_List_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\User_Forms\Passing_Test_Form.cs">
+    <Compile Include="Classes\Data\Passing_Test_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\User_Forms\Passing_Test_Form.Designer.cs">
+    <Compile Include="Classes\Data\Passing_Test_Form.Designer.cs">
       <DependentUpon>Passing_Test_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\User_Forms\Statistic_User_Form.cs">
@@ -185,10 +186,10 @@
     <Compile Include="Forms\User_Forms\Statistic_User_Form.Designer.cs">
       <DependentUpon>Statistic_User_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\User_Forms\Test_Result_Form.cs">
+    <Compile Include="Classes\Data\Test_Result_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\User_Forms\Test_Result_Form.Designer.cs">
+    <Compile Include="Classes\Data\Test_Result_Form.Designer.cs">
       <DependentUpon>Test_Result_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\User_Forms\Test_Selection_Form.cs">
@@ -270,13 +271,13 @@
     <EmbeddedResource Include="Forms\Tester_Forms\Test_List_Form.resx">
       <DependentUpon>Test_List_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\User_Forms\Passing_Test_Form.resx">
+    <EmbeddedResource Include="Classes\Data\Passing_Test_Form.resx">
       <DependentUpon>Passing_Test_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\User_Forms\Statistic_User_Form.resx">
       <DependentUpon>Statistic_User_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\User_Forms\Test_Result_Form.resx">
+    <EmbeddedResource Include="Classes\Data\Test_Result_Form.resx">
       <DependentUpon>Test_Result_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\User_Forms\Test_Selection_Form.resx">

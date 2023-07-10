@@ -7,13 +7,17 @@ namespace Testing.Classes.Data
 {
     internal class Array_Questoins_For_Passing_Test
     {
-        public Question[] Questions { get; set; }
-        public int id_Test;
+        public readonly Question[] questions;
+        public readonly int id_Test;
+        public readonly int test_Time;
+
 
         public Array_Questoins_For_Passing_Test(string name_Test)
         {
-            Questions = Transfers_Questions_From_Database_To_The_Array(Return_DataSet(name_Test));
-            
+            DataSet test_Questions = Return_DataSet(name_Test);
+            questions = Transfers_Questions_From_Database_To_The_Array(test_Questions);
+            id_Test = Convert.ToInt32(test_Questions.Tables[0].Rows[0]["Id_Test"]);
+            test_Time = Convert.ToInt32(test_Questions.Tables[0].Rows[0]["Time_Complete"]);
         }
 
         private DataSet Return_DataSet(string name_Tets)
@@ -37,7 +41,6 @@ namespace Testing.Classes.Data
         {
             var question = new Question[test_Questions.Tables[0].Rows.Count];
             int[] random_Sequence = Composes_Random_Sequence(test_Questions.Tables[0].Rows.Count);
-            id_Test = Convert.ToInt32(test_Questions.Tables[0].Rows[0]["Id_Test"]);
 
             for (var i = 0; i < test_Questions.Tables[0].Rows.Count; i++)
             {
@@ -100,7 +103,7 @@ namespace Testing.Classes.Data
                 if (contains_Random_Number)
                 {
                     return contains_Random_Number;
-                }              
+                }
             }
             return false;
         }
