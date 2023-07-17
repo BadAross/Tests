@@ -8,17 +8,17 @@ ___
 * Скачать архив проекта нажав Code и выбрав Download ZIP;
 * Распаковать архив и перейти в \Testing_program\Testing;
 * Подключение БД в MSSQL 2019;
- * Перейдите в Testing_program\Testing\DataBase;
- * Запустите файл скрипта (Empty_Tests_DB – БД без данных, Full_Tests_DB - БД с данными);
- * Создайте новую БД с названием Tests;
- * Выполните скрипт;
+  * Перейдите в Testing_program\Testing\DataBase;
+  * Запустите файл скрипта (Empty_Tests_DB – БД без данных, Full_Tests_DB - БД с данными);
+  * Создайте новую БД с названием Tests;
+  * Выполните скрипт;
 * Присоединение БД к пользовательскому интерфейсу;
- * Скачать архив проекта нажав Code и выбрав Download ZIP;
- * Распаковать архив и перейти в \Testing_program\Testing;
- * Запустить файл Testing.sln;
- * Откроет вкладка DataBase_Conected, в случае если вкладки нет, в интерфейсе Visual Studio разверните папку Classes и откройте файл DataBase_Conected;
- * Введите строку подключения к БД в переменную SqlConnection;
- * Запустите пользовательский интерфейс через файл Testing.exe в папке \Testing_program\Testing.
+  * Скачать архив проекта нажав Code и выбрав Download ZIP;
+  * Распаковать архив и перейти в \Testing_program\Testing;
+  * Запустить файл Testing.sln;
+  * Откроет вкладка DataBase_Conected, в случае если вкладки нет, в интерфейсе Visual Studio разверните папку Classes и откройте файл DataBase_Conected;
+  * Введите строку подключения к БД в переменную SqlConnection;
+  * Запустите пользовательский интерфейс через файл Testing.exe в папке \Testing_program\Testing.
 ___
 ### Инструкция по использованию
 ##### Для тестеров:
