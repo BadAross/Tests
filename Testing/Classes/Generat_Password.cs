@@ -19,6 +19,7 @@ namespace Testing.Classes.Performers
             }
             return password;
         }
+
         public static string Returns_Generated_Password()
         {
             string password;

@@ -19,7 +19,7 @@ namespace Testing.Forms.Tester_Form
 
         private void My_Tests_Batton_Click(object sender, EventArgs e)
         {
-            Shows_Select_Form(new Test_List_Form());
+            Shows_Select_Form(new My_Tests_Form());
         }
 
         private void Result_Button_Click(object sender, EventArgs e)

@@ -43,8 +43,6 @@ namespace Testing.Classes
             return true;
         }
 
-
-
         public static bool Checks_Absence_Identical_Test_Names(string name_Test)
         {
             var x = "select * from Tests where Name_Test ='" + name_Test + "'";

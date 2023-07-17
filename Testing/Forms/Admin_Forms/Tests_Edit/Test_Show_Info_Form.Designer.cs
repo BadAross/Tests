@@ -54,7 +54,6 @@
             this.Last_Entry_Button = new System.Windows.Forms.Button();
             this.Next_Entry_Button = new System.Windows.Forms.Button();
             this.Previos_Entry_Button = new System.Windows.Forms.Button();
-            this.Update_DataGridView_Button = new System.Windows.Forms.Button();
             this.save_Progress_GroupBox.SuspendLayout();
             this.Filter_GroupBox.SuspendLayout();
             this.Search_GroupBox.SuspendLayout();
@@ -286,7 +285,7 @@
             this.Exit_Button.FlatAppearance.BorderSize = 0;
             this.Exit_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exit_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.Exit_Button.Location = new System.Drawing.Point(1136, 988);
+            this.Exit_Button.Location = new System.Drawing.Point(1089, 988);
             this.Exit_Button.Name = "Exit_Button";
             this.Exit_Button.Size = new System.Drawing.Size(80, 80);
             this.Exit_Button.TabIndex = 130;
@@ -302,7 +301,7 @@
             this.Fiter_Reset_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Fiter_Reset_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.Fiter_Reset_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(57)))), ((int)(((byte)(42)))));
-            this.Fiter_Reset_Button.Location = new System.Drawing.Point(878, 988);
+            this.Fiter_Reset_Button.Location = new System.Drawing.Point(917, 988);
             this.Fiter_Reset_Button.Name = "Fiter_Reset_Button";
             this.Fiter_Reset_Button.Size = new System.Drawing.Size(80, 80);
             this.Fiter_Reset_Button.TabIndex = 129;
@@ -318,7 +317,7 @@
             this.Delete_Entry_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Delete_Entry_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.Delete_Entry_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(57)))), ((int)(((byte)(42)))));
-            this.Delete_Entry_Button.Location = new System.Drawing.Point(706, 988);
+            this.Delete_Entry_Button.Location = new System.Drawing.Point(745, 988);
             this.Delete_Entry_Button.Name = "Delete_Entry_Button";
             this.Delete_Entry_Button.Size = new System.Drawing.Size(80, 80);
             this.Delete_Entry_Button.TabIndex = 127;
@@ -334,7 +333,7 @@
             this.Export_Excel_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Export_Excel_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.Export_Excel_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(57)))), ((int)(((byte)(42)))));
-            this.Export_Excel_Button.Location = new System.Drawing.Point(964, 988);
+            this.Export_Excel_Button.Location = new System.Drawing.Point(1003, 988);
             this.Export_Excel_Button.Name = "Export_Excel_Button";
             this.Export_Excel_Button.Size = new System.Drawing.Size(80, 80);
             this.Export_Excel_Button.TabIndex = 126;
@@ -350,7 +349,7 @@
             this.Filter_Show_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Filter_Show_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.Filter_Show_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(57)))), ((int)(((byte)(42)))));
-            this.Filter_Show_Button.Location = new System.Drawing.Point(792, 988);
+            this.Filter_Show_Button.Location = new System.Drawing.Point(831, 988);
             this.Filter_Show_Button.Name = "Filter_Show_Button";
             this.Filter_Show_Button.Size = new System.Drawing.Size(80, 80);
             this.Filter_Show_Button.TabIndex = 125;
@@ -421,22 +420,6 @@
             this.Previos_Entry_Button.UseVisualStyleBackColor = false;
             this.Previos_Entry_Button.Click += new System.EventHandler(this.Previos_Entry_Button_Click);
             // 
-            // Update_DataGridView_Button
-            // 
-            this.Update_DataGridView_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(57)))), ((int)(((byte)(42)))));
-            this.Update_DataGridView_Button.BackgroundImage = global::Testing.Properties.Resources.Update_Image;
-            this.Update_DataGridView_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Update_DataGridView_Button.FlatAppearance.BorderSize = 0;
-            this.Update_DataGridView_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Update_DataGridView_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.Update_DataGridView_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(57)))), ((int)(((byte)(42)))));
-            this.Update_DataGridView_Button.Location = new System.Drawing.Point(1050, 988);
-            this.Update_DataGridView_Button.Name = "Update_DataGridView_Button";
-            this.Update_DataGridView_Button.Size = new System.Drawing.Size(80, 80);
-            this.Update_DataGridView_Button.TabIndex = 120;
-            this.Update_DataGridView_Button.UseVisualStyleBackColor = false;
-            this.Update_DataGridView_Button.Click += new System.EventHandler(this.Update_DataGridView_Button_Click);
-            // 
             // Test_Show_Info_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -453,7 +436,6 @@
             this.Controls.Add(this.Last_Entry_Button);
             this.Controls.Add(this.Next_Entry_Button);
             this.Controls.Add(this.Previos_Entry_Button);
-            this.Controls.Add(this.Update_DataGridView_Button);
             this.Controls.Add(this.save_Progress_GroupBox);
             this.Controls.Add(this.Filter_GroupBox);
             this.Controls.Add(this.Tests_DataGridView);
@@ -488,7 +470,6 @@
         private System.Windows.Forms.Button Last_Entry_Button;
         private System.Windows.Forms.Button Next_Entry_Button;
         private System.Windows.Forms.Button Previos_Entry_Button;
-        private System.Windows.Forms.Button Update_DataGridView_Button;
         private System.Windows.Forms.GroupBox save_Progress_GroupBox;
         private System.Windows.Forms.ProgressBar Save_Progress_ProgressBar;
         private System.Windows.Forms.Label label1;

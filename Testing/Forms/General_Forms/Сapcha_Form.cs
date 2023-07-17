@@ -7,7 +7,7 @@ namespace Testing.Forms
     public partial class Сapcha_Form : Form
     {
         private string capcha;
-        private int counter_Incorrectly_Entered_Captchas;
+        private byte counter_Incorrectly_Entered_Captchas;
 
         public Сapcha_Form()
         {

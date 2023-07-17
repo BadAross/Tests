@@ -3,84 +3,44 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using Testing.Class;
 using Testing.Classes;
 using Testing.Classes.Performers;
+using Testing.Forms.Admin_Forms.Tests_Edit;
 using Testing.Struct;
 
 namespace Testing.Forms.Admin.Tests_Edit
 {
     public partial class Test_Show_Info_Form : Form
     {
-        private List<Test> tests;
+        private List_Tests list_Tests = new();
 
         public Test_Show_Info_Form()
         {
             InitializeComponent();
-            Unloads_Data_From_Database();
             Fills_Combobox();
-        }
-
-        private List<Test> Return_Standard_Data_List()
-        {
-            return tests.OrderBy(x => x.name).ToList();
-        }
-
-        private void Unloads_Data_From_Database()
-        {
-            var query = "select Id_Test, Name_Test, Full_Name_Tester, Time_Complete " +
-                "from Tests join Testers on Id_Tester = Tester_Id";
-            DataSet dataSet = Data_Search_By_Sql_Query.Returns_Data_From_Database_On_Request(query);
-
-            tests = Fills_Dictionary_With_Data_From_Database(dataSet);
-            Show_Information_In_DataGridView();
-        }
-
-        private List<Test> Fills_Dictionary_With_Data_From_Database(DataSet dataSet)
-        {
-            var list_Tests = new List<Test>();
-            var test = new Test();
-
-            for (var i = 0; i < dataSet.Tables[0].Rows.Count; i++)
-            {
-                test.id = Convert.ToInt32(dataSet.Tables[0].Rows[i]["Id_Test"]);
-                test.name = Convert.ToString(dataSet.Tables[0].Rows[i]["Name_Test"]);
-                test.name_Tester = Convert.ToString(dataSet.Tables[0].Rows[i]["Full_Name_Tester"]);
-                if (Convert.ToInt32(dataSet.Tables[0].Rows[i]["Time_Complete"]) == 0)
-                {
-                    test.time_Complete = "Не ограничено";
-                }
-                else
-                {
-                    test.time_Complete = Convert.ToString(dataSet.Tables[0].Rows[i]["Time_Complete"]) + " мин.";
-                }
-
-                list_Tests.Add(test);
-            }
-            return list_Tests;
         }
 
         private void Fills_Combobox()
         {
             var bindingSource = new BindingSource();
 
-            bindingSource.DataSource = tests.OrderBy(x => x.name_Tester).Select(x => x.name_Tester).Distinct().ToList();
+            bindingSource.DataSource = list_Tests.tests.OrderBy(x => x.name_Tester).Select(x => x.name_Tester).Distinct().ToList();
             Filtering_Full_Name_Tester_ComboBox.DataSource = bindingSource.DataSource;
         }
 
         private void Show_Information_In_DataGridView()
         {
-            var list_Tests = Defines_Selected_Filters();
+            var sorting_List_Tests = Defines_Selected_Filters();
 
-            if (list_Tests.Count > 0)
+            if (sorting_List_Tests.Count > 0)
             {
                 List<Column_Parameter> column_Parameters = Returns_Array_Column_Parametrs();
                 Customization_DataGridView.Sets_Line_Height(Tests_DataGridView);
 
-                Tests_DataGridView.RowCount = list_Tests.Count;
+                Tests_DataGridView.RowCount = sorting_List_Tests.Count;
                 Tests_DataGridView.ColumnCount = column_Parameters.Count;
 
-                Fills_DataGridView(list_Tests);
+                Fills_DataGridView(sorting_List_Tests);
 
                 Customization_DataGridView.Sets_Parameters_For_DataGridView(Tests_DataGridView);
                 Customization_DataGridView.Sets_Received_Titles_And_Size_For_Headings(Tests_DataGridView, column_Parameters);
@@ -91,7 +51,7 @@ namespace Testing.Forms.Admin.Tests_Edit
                 Tests_DataGridView.Rows.Clear();
                 MessageBox.Show("Записей не найдено!");
             }
-            Number_Entry_Label.Text = list_Tests.Count + " из " + tests.Count;
+            Number_Entry_Label.Text = sorting_List_Tests.Count + " из " + list_Tests.tests.Count;
         }
 
         private void Fills_DataGridView(List<Test> list_Tests)
@@ -119,50 +79,50 @@ namespace Testing.Forms.Admin.Tests_Edit
 
         private List<Test> Defines_Selected_Filters()
         {
-            var list_Tests = Return_Standard_Data_List();
+            var sorting_list_Tests = list_Tests.tests;
 
             if (Filtering_Full_Name_CheckBox.Checked)
             {
-                list_Tests = Returns_Filtered_Data_By_Selected_Parameter();
+                sorting_list_Tests = Returns_Filtered_Data_By_Selected_Parameter();
             }
             if (Sorting_ComboBox.SelectedIndex != 0)
             {
-                list_Tests = Sorts_Data_By_Specified_Parameter(list_Tests);
+                sorting_list_Tests = Sorts_Data_By_Specified_Parameter(sorting_list_Tests);
             }
 
             Data_Search.Clears_Datagridview_From_Search(Tests_DataGridView);
-            return list_Tests;
+            return sorting_list_Tests;
         }
 
         private List<Test> Returns_Filtered_Data_By_Selected_Parameter()
         {
-            var list_Tests = Return_Standard_Data_List();
+            var filtering_List_Tests = list_Tests.tests;
 
             if (Filtering_Full_Name_CheckBox.Checked)
             {
-                list_Tests = list_Tests.Where(x => x.name_Tester == Filtering_Full_Name_Tester_ComboBox.Text).ToList();
+                filtering_List_Tests = filtering_List_Tests.Where(x => x.name_Tester == Filtering_Full_Name_Tester_ComboBox.Text).ToList();
             }
-            return list_Tests;
+            return filtering_List_Tests;
         }
 
-        private List<Test> Sorts_Data_By_Specified_Parameter(List<Test> list_Test)
+        private List<Test> Sorts_Data_By_Specified_Parameter(List<Test> sorting_List_Test)
         {
             switch (Sorting_ComboBox.SelectedIndex)
             {
                 case 1:
-                    list_Test = list_Test.OrderBy(x => x.name).ToList();
+                    sorting_List_Test = sorting_List_Test.OrderBy(x => x.name).ToList();
                     break;
                 case 2:
-                    list_Test = list_Test.OrderByDescending(x => x.name).ToList();
+                    sorting_List_Test = sorting_List_Test.OrderByDescending(x => x.name).ToList();
                     break;
                 case 3:
-                    list_Test = list_Test.OrderBy(x => x.name_Tester).ToList();
+                    sorting_List_Test = sorting_List_Test.OrderBy(x => x.name_Tester).ToList();
                     break;
                 case 4:
-                    list_Test = list_Test.OrderByDescending(x => x.name_Tester).ToList();
+                    sorting_List_Test = sorting_List_Test.OrderByDescending(x => x.name_Tester).ToList();
                     break;
             }
-            return list_Test;
+            return sorting_List_Test;
         }
 
         private void Next_Entry_Button_Click(object sender, System.EventArgs e)
@@ -212,11 +172,6 @@ namespace Testing.Forms.Admin.Tests_Edit
             Save_Progress_ProgressBar.Value = 0;
         }
 
-        private void Update_DataGridView_Button_Click(object sender, EventArgs e)
-        {
-            Unloads_Data_From_Database();
-        }
-
         private void Exit_Button_Click(object sender, EventArgs e)
         {
             var form = new Admin_Menu_Form();
@@ -256,9 +211,7 @@ namespace Testing.Forms.Admin.Tests_Edit
 
             if (result == DialogResult.Yes)
             {
-                var id_Test = Convert.ToInt32(Tests_DataGridView.CurrentRow.Cells[0].Value);
-                DataBase_Editor.Edited_Information_To_DataBase("delete from Qustions where Test_Id = " + id_Test + "; " +
-                    "delete from Results where Test_Id = " + id_Test + "; delete from Tests where Id_Test = " + id_Test + "");
+                Delete_Test.Delete_Select_Test(Convert.ToInt32(Tests_DataGridView.CurrentRow.Cells[0].Value));
             }
         }
     }

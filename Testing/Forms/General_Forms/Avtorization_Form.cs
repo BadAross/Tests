@@ -23,7 +23,7 @@ namespace Testing
             Password_TextBox.UseSystemPasswordChar = true;
         }
 
-        private void ChangesThePasswordHidingImage()
+        private void Changes_Password_Hiding_Image()
         {
             if (Password_TextBox.UseSystemPasswordChar)
             {
@@ -48,15 +48,26 @@ namespace Testing
             }
         }
 
-        private void Returns_Accounts_Entered_Username_And_Password()
+        private void Finds_Accounts_Entered_Username_And_Password()
         {
             var password = Hash_Password.Retern_Hesh_Password(Password_TextBox.Text);
-            DataSet uzer_Account = Data_Search_By_Sql_Query.Returns_Data_From_Database_On_Request("SELECT* FROM Users where Login_User ='"
-                + Login_TextBox.Text + "' and Password_User = '" + password + "'");
-            DataSet tester_Account = Data_Search_By_Sql_Query.Returns_Data_From_Database_On_Request("SELECT* FROM Testers where Login_Tester ='"
-                + Login_TextBox.Text + "' and Password_Tester = '" + password + "'");
-            DataSet admin_Account = Data_Search_By_Sql_Query.Returns_Data_From_Database_On_Request("SELECT* FROM Admins where Login_Admin ='"
-                + Login_TextBox.Text + "' and Password_Admin = '" + password + "'");
+
+            var uzer_Account = Data_Search_By_Sql_Query.Returns_Data_From_Database_On_Request(@"select
+                  Id_User
+                , Full_Name_User
+                from Users
+                where Login_User ='" + Login_TextBox.Text + "' and Password_User = '" + password + "'");
+
+            var tester_Account = Data_Search_By_Sql_Query.Returns_Data_From_Database_On_Request(@"select
+                  Id_Tester
+                , Full_Name_Tester
+                from Testers
+                where Login_Tester ='" + Login_TextBox.Text + "' and Password_Tester = '" + password + "'");
+
+            var admin_Account = Data_Search_By_Sql_Query.Returns_Data_From_Database_On_Request(@"select
+                  Id_Admin
+                from Admins
+                where Login_Admin ='" + Login_TextBox.Text + "' and Password_Admin = '" + password + "'");
 
             Identifies_User_By_Username_And_Password(uzer_Account, tester_Account, admin_Account);
         }
@@ -93,7 +104,7 @@ namespace Testing
 
         private void Enter_Batton_Click(object sender, EventArgs e)
         {
-            Returns_Accounts_Entered_Username_And_Password();
+            Finds_Accounts_Entered_Username_And_Password();
         }
 
         private void Close_Button_Click(object sender, EventArgs e)
@@ -104,7 +115,7 @@ namespace Testing
         private void ShowPassword_Button_Click(object sender, EventArgs e)
         {
             Password_TextBox.UseSystemPasswordChar = !Password_TextBox.UseSystemPasswordChar;
-            ChangesThePasswordHidingImage();
+            Changes_Password_Hiding_Image();
         }
 
         private void Registration_Button_Click(object sender, EventArgs e)

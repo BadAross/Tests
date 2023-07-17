@@ -7,7 +7,7 @@ namespace Testing.Classes
 {
     internal class Customization_DataGridView
     {
-        static public void Sets_Parameters_For_DataGridView(DataGridView dataGridView)
+        public static void Sets_Parameters_For_DataGridView(DataGridView dataGridView)
         {
             Color main_Color = Color.FromArgb(31, 57, 42);
             Color additional_Color = Color.FromArgb(244, 220, 162);
@@ -32,7 +32,7 @@ namespace Testing.Classes
             dataGridView.Columns[0].Visible = false;
         }
 
-        static void Paints_DataGridView(DataGridView dataGridView, Color main_Color, Color additional_Color)
+        private static void Paints_DataGridView(DataGridView dataGridView, Color main_Color, Color additional_Color)
         {
             dataGridView.RowsDefaultCellStyle.BackColor = additional_Color;
             dataGridView.DefaultCellStyle.ForeColor = main_Color;
@@ -44,7 +44,7 @@ namespace Testing.Classes
             dataGridView.GridColor = main_Color;
         }
 
-        static public void Sets_Received_Titles_And_Size_For_Headings(DataGridView dataGridView, List<Column_Parameter> Column_Parameters)
+        public static void Sets_Received_Titles_And_Size_For_Headings(DataGridView dataGridView, List<Column_Parameter> Column_Parameters)
         {
             for (int i = 0; i < Column_Parameters.Count; i++)
             {
@@ -54,7 +54,7 @@ namespace Testing.Classes
             }
         }
 
-        static public void Sets_Line_Height(DataGridView dataGridView, int height_Cells = 80)
+        public static void Sets_Line_Height(DataGridView dataGridView, int height_Cells = 80)
         {
             dataGridView.RowTemplate.MinimumHeight = height_Cells;
         }

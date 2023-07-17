@@ -72,8 +72,26 @@
     <Compile Include="Classes\Customization_DataGridView.cs" />
     <Compile Include="Classes\DataBase_Conected.cs" />
     <Compile Include="Classes\DataBase_Editor.cs" />
-    <Compile Include="Classes\Data\Array_Questoins_For_Passing_Test.cs" />
-    <Compile Include="Classes\Data\Saving_Results_Passage.cs" />
+    <Compile Include="Forms\Admin_Forms\Results_Edit\Delete_Result.cs" />
+    <Compile Include="Forms\Admin_Forms\Results_Edit\List_Result_Info.cs" />
+    <Compile Include="Forms\Admin_Forms\Testers_Edit\Tester_Edit\List_Tester_Edit.cs" />
+    <Compile Include="Forms\Admin_Forms\Testers_Edit\Tester_Edit\Save_Tester_Change.cs" />
+    <Compile Include="Forms\Admin_Forms\Testers_Edit\Tester_Info\List_Tester.cs" />
+    <Compile Include="Forms\Admin_Forms\Tests_Edit\Delete_Test.cs" />
+    <Compile Include="Forms\Admin_Forms\Tests_Edit\List_Tests.cs" />
+    <Compile Include="Forms\Admin_Forms\Users_Edit\Group_Editing\List_Group.cs" />
+    <Compile Include="Forms\Admin_Forms\Users_Edit\Group_Editing\Save_Groups_Change.cs" />
+    <Compile Include="Forms\Admin_Forms\Users_Edit\User_Editing\List_User.cs" />
+    <Compile Include="Forms\Admin_Forms\Users_Edit\User_Editing\Save_User_Change.cs" />
+    <Compile Include="Forms\Admin_Forms\Users_Edit\User_Info\List_User_Info.cs" />
+    <Compile Include="Forms\General_Forms\Registration\Save_Account.cs" />
+    <Compile Include="Forms\Tester_Forms\Editing_Test\Dictionary_Editing_Questions.cs" />
+    <Compile Include="Forms\Tester_Forms\Editing_Test\Save_Test_Change.cs" />
+    <Compile Include="Forms\Tester_Forms\New_Test\Dictionary_New_Questions.cs" />
+    <Compile Include="Forms\Tester_Forms\New_Test\Save_New_Test.cs" />
+    <Compile Include="Forms\Tester_Forms\Result_Test\List_Result_Tester.cs" />
+    <Compile Include="Forms\User_Forms\Passing_Tests\Array_Questoins_For_Passing_Test.cs" />
+    <Compile Include="Forms\User_Forms\Passing_Tests\Saving_Results_Passage.cs" />
     <Compile Include="Classes\Data_Search.cs" />
     <Compile Include="Classes\Data_Search_By_Sql_Query.cs" />
     <Compile Include="Classes\Generat_Password.cs" />
@@ -81,7 +99,7 @@
     <Compile Include="Classes\Active_Account.cs" />
     <Compile Include="Classes\Hash_Password.cs" />
     <Compile Include="Classes\Switching_Datagridview_Rows.cs" />
-    <Compile Include="Classes\Data\Test_Completion_Time.cs" />
+    <Compile Include="Forms\User_Forms\Passing_Tests\Test_Completion_Time.cs" />
     <Compile Include="Classes\Working_With_Excel.cs" />
     <Compile Include="Enum\Type_Change.cs" />
     <Compile Include="Forms\Admin_Forms\Admin_Menu_Form.cs">
@@ -96,16 +114,16 @@
     <Compile Include="Forms\Admin_Forms\Results_Edit\Result_Info_Form.Designer.cs">
       <DependentUpon>Result_Info_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin_Forms\Testers_Edit\Testers_Info_Form.cs">
+    <Compile Include="Forms\Admin_Forms\Testers_Edit\Tester_Info\Testers_Info_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin_Forms\Testers_Edit\Testers_Info_Form.Designer.cs">
+    <Compile Include="Forms\Admin_Forms\Testers_Edit\Tester_Info\Testers_Info_Form.Designer.cs">
       <DependentUpon>Testers_Info_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin_Forms\Testers_Edit\Tester_Edit_Form.cs">
+    <Compile Include="Forms\Admin_Forms\Testers_Edit\Tester_Edit\Tester_Edit_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin_Forms\Testers_Edit\Tester_Edit_Form.Designer.cs">
+    <Compile Include="Forms\Admin_Forms\Testers_Edit\Tester_Edit\Tester_Edit_Form.Designer.cs">
       <DependentUpon>Tester_Edit_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin_Forms\Tests_Edit\Test_Show_Info_Form.cs">
@@ -114,22 +132,22 @@
     <Compile Include="Forms\Admin_Forms\Tests_Edit\Test_Show_Info_Form.Designer.cs">
       <DependentUpon>Test_Show_Info_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin_Forms\Users_Edit\Group_Editing_Form.cs">
+    <Compile Include="Forms\Admin_Forms\Users_Edit\Group_Editing\Group_Editing_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin_Forms\Users_Edit\Group_Editing_Form.Designer.cs">
+    <Compile Include="Forms\Admin_Forms\Users_Edit\Group_Editing\Group_Editing_Form.Designer.cs">
       <DependentUpon>Group_Editing_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin_Forms\Users_Edit\User_Editing_Form.cs">
+    <Compile Include="Forms\Admin_Forms\Users_Edit\User_Editing\User_Editing_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin_Forms\Users_Edit\User_Editing_Form.Designer.cs">
+    <Compile Include="Forms\Admin_Forms\Users_Edit\User_Editing\User_Editing_Form.Designer.cs">
       <DependentUpon>User_Editing_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin_Forms\Users_Edit\Users_Show_Info_Form.cs">
+    <Compile Include="Forms\Admin_Forms\Users_Edit\User_Info\Users_Show_Info_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin_Forms\Users_Edit\Users_Show_Info_Form.Designer.cs">
+    <Compile Include="Forms\Admin_Forms\Users_Edit\User_Info\Users_Show_Info_Form.Designer.cs">
       <DependentUpon>Users_Show_Info_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\General_Forms\Avtorization_Form.cs">
@@ -138,28 +156,28 @@
     <Compile Include="Forms\General_Forms\Avtorization_Form.Designer.cs">
       <DependentUpon>Avtorization_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\General_Forms\Registration_Form.cs">
+    <Compile Include="Forms\General_Forms\Registration\Registration_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\General_Forms\Registration_Form.Designer.cs">
+    <Compile Include="Forms\General_Forms\Registration\Registration_Form.Designer.cs">
       <DependentUpon>Registration_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Tester_Forms\Editing_Test_Form.cs">
+    <Compile Include="Forms\Tester_Forms\Editing_Test\Editing_Test_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Tester_Forms\Editing_Test_Form.Designer.cs">
+    <Compile Include="Forms\Tester_Forms\Editing_Test\Editing_Test_Form.Designer.cs">
       <DependentUpon>Editing_Test_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Tester_Forms\New_Test_Form.cs">
+    <Compile Include="Forms\Tester_Forms\New_Test\New_Test_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Tester_Forms\New_Test_Form.Designer.cs">
+    <Compile Include="Forms\Tester_Forms\New_Test\New_Test_Form.Designer.cs">
       <DependentUpon>New_Test_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Tester_Forms\Result_Tests_Form.cs">
+    <Compile Include="Forms\Tester_Forms\Result_Test\Result_Tests_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Tester_Forms\Result_Tests_Form.Designer.cs">
+    <Compile Include="Forms\Tester_Forms\Result_Test\Result_Tests_Form.Designer.cs">
       <DependentUpon>Result_Tests_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tester_Forms\Tester_Menu_Form.cs">
@@ -168,34 +186,36 @@
     <Compile Include="Forms\Tester_Forms\Tester_Menu_Form.Designer.cs">
       <DependentUpon>Tester_Menu_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Tester_Forms\Test_List_Form.cs">
+    <Compile Include="Forms\Tester_Forms\My_Tests_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Tester_Forms\Test_List_Form.Designer.cs">
-      <DependentUpon>Test_List_Form.cs</DependentUpon>
+    <Compile Include="Forms\Tester_Forms\My_Tests_Form.Designer.cs">
+      <DependentUpon>My_Tests_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Data\Passing_Test_Form.cs">
+    <Compile Include="Forms\User_Forms\Passing_Tests\Passing_Test_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Classes\Data\Passing_Test_Form.Designer.cs">
+    <Compile Include="Forms\User_Forms\Passing_Tests\Passing_Test_Form.Designer.cs">
       <DependentUpon>Passing_Test_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\User_Forms\Statistic_User_Form.cs">
+    <Compile Include="Forms\User_Forms\Statistic_User\List_Result_Passing_Test_User.cs" />
+    <Compile Include="Forms\User_Forms\Statistic_User\Statistic_User_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\User_Forms\Statistic_User_Form.Designer.cs">
+    <Compile Include="Forms\User_Forms\Statistic_User\Statistic_User_Form.Designer.cs">
       <DependentUpon>Statistic_User_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Data\Test_Result_Form.cs">
+    <Compile Include="Forms\User_Forms\Passing_Tests\Test_Result_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Classes\Data\Test_Result_Form.Designer.cs">
+    <Compile Include="Forms\User_Forms\Passing_Tests\Test_Result_Form.Designer.cs">
       <DependentUpon>Test_Result_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\User_Forms\Test_Selection_Form.cs">
+    <Compile Include="Forms\User_Forms\Test_Selection\List_Tests_Pass.cs" />
+    <Compile Include="Forms\User_Forms\Test_Selection\Test_Selection_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\User_Forms\Test_Selection_Form.Designer.cs">
+    <Compile Include="Forms\User_Forms\Test_Selection\Test_Selection_Form.Designer.cs">
       <DependentUpon>Test_Selection_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\User_Forms\User_Menu_Form.cs">
@@ -225,6 +245,7 @@
     <Compile Include="Struct\Result_Passing_Test.cs" />
     <Compile Include="Struct\Test.cs" />
     <Compile Include="Struct\Tester.cs" />
+    <Compile Include="Struct\Test_Pass.cs" />
     <Compile Include="Struct\User.cs" />
     <EmbeddedResource Include="Forms\Admin_Forms\Admin_Menu_Form.resx">
       <DependentUpon>Admin_Menu_Form.cs</DependentUpon>
@@ -232,55 +253,55 @@
     <EmbeddedResource Include="Forms\Admin_Forms\Results_Edit\Result_Info_Form.resx">
       <DependentUpon>Result_Info_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin_Forms\Testers_Edit\Testers_Info_Form.resx">
+    <EmbeddedResource Include="Forms\Admin_Forms\Testers_Edit\Tester_Info\Testers_Info_Form.resx">
       <DependentUpon>Testers_Info_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin_Forms\Testers_Edit\Tester_Edit_Form.resx">
+    <EmbeddedResource Include="Forms\Admin_Forms\Testers_Edit\Tester_Edit\Tester_Edit_Form.resx">
       <DependentUpon>Tester_Edit_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin_Forms\Tests_Edit\Test_Show_Info_Form.resx">
       <DependentUpon>Test_Show_Info_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin_Forms\Users_Edit\Group_Editing_Form.resx">
+    <EmbeddedResource Include="Forms\Admin_Forms\Users_Edit\Group_Editing\Group_Editing_Form.resx">
       <DependentUpon>Group_Editing_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin_Forms\Users_Edit\User_Editing_Form.resx">
+    <EmbeddedResource Include="Forms\Admin_Forms\Users_Edit\User_Editing\User_Editing_Form.resx">
       <DependentUpon>User_Editing_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin_Forms\Users_Edit\Users_Show_Info_Form.resx">
+    <EmbeddedResource Include="Forms\Admin_Forms\Users_Edit\User_Info\Users_Show_Info_Form.resx">
       <DependentUpon>Users_Show_Info_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\General_Forms\Avtorization_Form.resx">
       <DependentUpon>Avtorization_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\General_Forms\Registration_Form.resx">
+    <EmbeddedResource Include="Forms\General_Forms\Registration\Registration_Form.resx">
       <DependentUpon>Registration_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Tester_Forms\Editing_Test_Form.resx">
+    <EmbeddedResource Include="Forms\Tester_Forms\Editing_Test\Editing_Test_Form.resx">
       <DependentUpon>Editing_Test_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Tester_Forms\New_Test_Form.resx">
+    <EmbeddedResource Include="Forms\Tester_Forms\New_Test\New_Test_Form.resx">
       <DependentUpon>New_Test_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Tester_Forms\Result_Tests_Form.resx">
+    <EmbeddedResource Include="Forms\Tester_Forms\Result_Test\Result_Tests_Form.resx">
       <DependentUpon>Result_Tests_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tester_Forms\Tester_Menu_Form.resx">
       <DependentUpon>Tester_Menu_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Tester_Forms\Test_List_Form.resx">
-      <DependentUpon>Test_List_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Tester_Forms\My_Tests_Form.resx">
+      <DependentUpon>My_Tests_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Classes\Data\Passing_Test_Form.resx">
+    <EmbeddedResource Include="Forms\User_Forms\Passing_Tests\Passing_Test_Form.resx">
       <DependentUpon>Passing_Test_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\User_Forms\Statistic_User_Form.resx">
+    <EmbeddedResource Include="Forms\User_Forms\Statistic_User\Statistic_User_Form.resx">
       <DependentUpon>Statistic_User_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Classes\Data\Test_Result_Form.resx">
+    <EmbeddedResource Include="Forms\User_Forms\Passing_Tests\Test_Result_Form.resx">
       <DependentUpon>Test_Result_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\User_Forms\Test_Selection_Form.resx">
+    <EmbeddedResource Include="Forms\User_Forms\Test_Selection\Test_Selection_Form.resx">
       <DependentUpon>Test_Selection_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\User_Forms\User_Menu_Form.resx">

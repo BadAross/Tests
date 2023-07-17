@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using Testing.Class;
 using Testing.Classes;
 using Testing.Classes.Performers;
 using Testing.Forms.Admin;
@@ -13,46 +12,28 @@ namespace Testing.Forms.Admin_Forms.Results_Edit
 {
     public partial class Result_Info_Form : Form
     {
-        private List<Result_Passing_Test> results;
+        private List_Result_Info list_Result = new();
 
         public Result_Info_Form()
         {
             InitializeComponent();
-            Unloads_Data_From_Database();
-            Fills_Combobox();
+            Fills_ComboBoxes();
         }
 
-        private List<Result_Passing_Test> Return_Standard_Data_List()
-        {
-            return results.OrderBy(x => x.test_Start_Time).ToList();
-        }
-
-        private void Unloads_Data_From_Database()
-        {
-            var query = "select Id_Result, Full_Name_User, Code_Group, Full_Name_Tester, Name_Test, Number_Correct_Answers, " +
-                "Percentage_Correct_Answers, Test_Start_Time, Time_Spent from Results " +
-                "join Tests on Id_Test = Test_Id join Testers on Id_Tester = Tester_Id " +
-                "join Users on Id_User = User_Id join Groups on Id_Group = Group_Id";
-            DataSet dataSet = Data_Search_By_Sql_Query.Returns_Data_From_Database_On_Request(query);
-
-            results = Fills_Dictionary_With_Data_From_Database(dataSet);
-            Show_Information_In_DataGridView();
-        }
-
-        private void Fills_Combobox()
+        private void Fills_ComboBoxes()
         {
             var bindingSource = new BindingSource();
 
-            bindingSource.DataSource = results.OrderBy(x => x.full_Name_User).Select(x => x.full_Name_User).Distinct().ToList();
+            bindingSource.DataSource = list_Result.Results.OrderBy(x => x.full_Name_User).Select(x => x.full_Name_User).Distinct().ToList();
             Filtering_Full_Name_User_ComboBox.DataSource = bindingSource.DataSource;
 
-            bindingSource.DataSource = results.OrderBy(x => x.code_Group).Select(x => x.code_Group).Distinct().ToList();
+            bindingSource.DataSource = list_Result.Results.OrderBy(x => x.code_Group).Select(x => x.code_Group).Distinct().ToList();
             Filtering_Code_Group_ComboBox.DataSource = bindingSource.DataSource;
 
-            bindingSource.DataSource = results.OrderBy(x => x.full_Name_Tester).Select(x => x.full_Name_Tester).Distinct().ToList();
+            bindingSource.DataSource = list_Result.Results.OrderBy(x => x.full_Name_Tester).Select(x => x.full_Name_Tester).Distinct().ToList();
             Filtering_Full_Name_Tester_ComboBox.DataSource = bindingSource.DataSource;
 
-            bindingSource.DataSource = results.OrderBy(x => x.name_Test).Select(x => x.name_Test).Distinct().ToList();
+            bindingSource.DataSource = list_Result.Results.OrderBy(x => x.name_Test).Select(x => x.name_Test).Distinct().ToList();
             Filtering_Name_Test_ComboBox.DataSource = bindingSource.DataSource;
         }
 
@@ -91,7 +72,7 @@ namespace Testing.Forms.Admin_Forms.Results_Edit
 
         private List<Result_Passing_Test> Defines_Selected_Filters()
         {
-            var list_Result_Passing_Test = Return_Standard_Data_List();
+            var list_Result_Passing_Test = list_Result.Results;
 
             if (Filtering_Full_Name_User_CheckBox.Checked | Filtering_Code_Group_CheckBox.Checked |
                 Filtering_Full_Name_Tester_CheckBox.Checked | Filtering_Name_Test_CheckBox.Checked)
@@ -106,28 +87,6 @@ namespace Testing.Forms.Admin_Forms.Results_Edit
             Data_Search.Clears_Datagridview_From_Search(Result_DataGridView);
 
             return list_Result_Passing_Test;
-        }
-
-        private List<Result_Passing_Test> Fills_Dictionary_With_Data_From_Database(DataSet dataSet)
-        {
-            var list_Results = new List<Result_Passing_Test>();
-            var result = new Result_Passing_Test();
-
-            for (var i = 0; i < dataSet.Tables[0].Rows.Count; i++)
-            {
-                result.id = Convert.ToInt32(dataSet.Tables[0].Rows[i]["Id_Result"]);
-                result.full_Name_User = Convert.ToString(dataSet.Tables[0].Rows[i]["Full_Name_User"]);
-                result.code_Group = Convert.ToString(dataSet.Tables[0].Rows[i]["Code_Group"]);
-                result.full_Name_Tester = Convert.ToString(dataSet.Tables[0].Rows[i]["Full_Name_Tester"]);
-                result.name_Test = Convert.ToString(dataSet.Tables[0].Rows[i]["Name_Test"]);
-                result.number_Correct_Answers = Convert.ToString(dataSet.Tables[0].Rows[i]["Number_Correct_Answers"]);
-                result.percentage_Correct_Answers = Convert.ToString(dataSet.Tables[0].Rows[i]["Percentage_Correct_Answers"]);
-                result.test_Start_Time = Convert.ToString(dataSet.Tables[0].Rows[i]["Test_Start_Time"]);
-                result.time_Spent = Convert.ToString(dataSet.Tables[0].Rows[i]["Time_Spent"]);
-
-                list_Results.Add(result);
-            }
-            return list_Results;
         }
 
         private void Show_Information_In_DataGridView()
@@ -153,12 +112,12 @@ namespace Testing.Forms.Admin_Forms.Results_Edit
                 Result_DataGridView.Rows.Clear();
                 MessageBox.Show("Записей не найдено!");
             }
-            Number_Entry_Label.Text = list_Result_Passing_Test.Count + " из " + results.Count;
+            Number_Entry_Label.Text = list_Result_Passing_Test.Count + " из " + list_Result.Results.Count;
         }
 
         private List<Result_Passing_Test> Returns_Filtered_Data_By_Selected_Parameter()
         {
-            var list_Result_Passing_Test = Return_Standard_Data_List();
+            var list_Result_Passing_Test = list_Result.Results;
 
             if (Filtering_Full_Name_User_CheckBox.Checked)
             {
@@ -302,10 +261,6 @@ namespace Testing.Forms.Admin_Forms.Results_Edit
         {
             Show_Information_In_DataGridView();
         }
-        private void Update_DataGridView_Button_Click(object sender, EventArgs e)
-        {
-            Unloads_Data_From_Database();
-        }
 
         private void Exit_Button_Click(object sender, EventArgs e)
         {
@@ -334,26 +289,33 @@ namespace Testing.Forms.Admin_Forms.Results_Edit
             if (result == DialogResult.Yes)
             {
                 var id_Result = Convert.ToInt32(Result_DataGridView.CurrentRow.Cells[0].Value);
-                DataBase_Editor.Edited_Information_To_DataBase("delete from Results where Id_Result = " + id_Result + "");
-                results.RemoveAt(id_Result);
+                Delete_Result.Delete_Select_Result(id_Result);
+                list_Result.Results.RemoveAt(id_Result);
                 Show_Information_In_DataGridView();
             }
+        }
+
+        private void Sets_Zero_Index_Comboboxes()
+        {
+            Filtering_Full_Name_User_ComboBox.SelectedIndex = 0;
+            Filtering_Code_Group_ComboBox.SelectedIndex = 0;
+            Filtering_Full_Name_Tester_ComboBox.SelectedIndex = 0;
+            Filtering_Name_Test_ComboBox.SelectedIndex = 0;
+        }
+
+        private void Unchecked_Checkboxes()
+        {
+            Filtering_Full_Name_User_CheckBox.Checked = false;
+            Filtering_Code_Group_CheckBox.Checked = false;
+            Filtering_Full_Name_Tester_CheckBox.Checked = false;
+            Filtering_Name_Test_CheckBox.Checked = false;
         }
 
         private void Fiter_Reset_Button_Click(object sender, EventArgs e)
         {
             Sorting_ComboBox.SelectedIndex = 0;
-
-            Filtering_Full_Name_User_ComboBox.SelectedIndex = 0;
-            Filtering_Code_Group_ComboBox.SelectedIndex = 0;
-            Filtering_Full_Name_Tester_ComboBox.SelectedIndex = 0;
-            Filtering_Name_Test_ComboBox.SelectedIndex = 0;
-
-            Filtering_Full_Name_User_CheckBox.Checked = false;
-            Filtering_Code_Group_CheckBox.Checked = false;
-            Filtering_Full_Name_Tester_CheckBox.Checked = false;
-            Filtering_Name_Test_CheckBox.Checked = false;
-
+            Sets_Zero_Index_Comboboxes();
+            Unchecked_Checkboxes();
             Search_TextBox.Text = string.Empty;
             Result_DataGridView.ClearSelection();
             Data_Search.Clears_Datagridview_From_Search(Result_DataGridView);

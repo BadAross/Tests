@@ -86,7 +86,6 @@ X:\Testing_program\Testing\Testing\obj\Debug\Testing.Forms.Tester_Form.Editing_T
 X:\Testing_program\Testing\Testing\obj\Debug\Testing.Forms.Tester_Form.New_Test_Form.resources
 X:\Testing_program\Testing\Testing\obj\Debug\Testing.Forms.Tester_Form.Result_Tests_Form.resources
 X:\Testing_program\Testing\Testing\obj\Debug\Testing.Forms.Tester_Form.Tester_Menu_Form.resources
-X:\Testing_program\Testing\Testing\obj\Debug\Testing.Forms.Tester_Form.Test_List_Form.resources
 X:\Testing_program\Testing\Testing\obj\Debug\Testing.Forms.Passing_Test_Form.resources
 X:\Testing_program\Testing\Testing\obj\Debug\Testing.Forms.Statistic_User_Form.resources
 X:\Testing_program\Testing\Testing\obj\Debug\Testing.Forms.Test_Result_Form.resources
@@ -98,3 +97,4 @@ X:\Testing_program\Testing\Testing\obj\Debug\Testing.csproj.GenerateResource.cac
 X:\Testing_program\Testing\Testing\obj\Debug\Testing.csproj.CoreCompileInputs.cache
 X:\Testing_program\Testing\Testing\obj\Debug\Testing.exe
 X:\Testing_program\Testing\Testing\obj\Debug\Testing.pdb
+X:\Testing_program\Testing\Testing\obj\Debug\Testing.Forms.Tester_Form.My_Tests_Form.resources
