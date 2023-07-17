@@ -8,7 +8,7 @@ ___
 1.	Скачать архив проекта нажав Code и выбрав Download ZIP;
 2.	Распаковать архив и перейти в \Testing_program\Testing;
 3.	Подключение БД в MSSQL 2019;
-    a.	Перейдите в Testing_program\Testing\DataBase;
+    1.1.	Перейдите в Testing_program\Testing\DataBase;
     b.	Запустите файл скрипта (Empty_Tests_DB – БД без данных, Full_Tests_DB - БД с данными);
     c.	Создайте новую БД с названием Tests;
     d.	Выполните скрипт;
